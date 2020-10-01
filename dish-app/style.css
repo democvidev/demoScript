@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');/*Poppins - Google Fonts*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #dacb9b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #d1bd7b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.mobile-container {
+    background-color: white;
+    box-shadow: 0 0 4px 4px #3333331a;
+    width: 400px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    border: none;
+    font-family: inherit;
+    background-color: #eee;
+}
+
+header button {
+    background-color: transparent;
+    color: rgb(196, 174, 216);
+    border: none;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.fav-container {
+    padding: 0.25rem 1rem;    
+    text-align: center;
+    background-color: #ddcfa8;
+}
+
+.fav-meals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.fav-meals li {
+    position: relative;
+    min-width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+.fav-meals li .clear {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    font-size: 1.2rem;
+    opacity: 0;
+}
+
+.fav-meals li:hover .clear{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fav-meals li img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 10px 5px 0 #3333331a;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.fav-meals li span {
+    font-size: 0.8rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+.meal {
+    margin: 1.5rem;
+    box-shadow: 0 0 5px 5px #3333331a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+
+
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body h4 {
+    margin: 0;
+}
+
+.meal-body .fav-btn {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 1px;
+}
+
+.meal-body .fav-btn.active {
+    color: blueviolet;
+}
+
+.popup-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;    
+    font-size: 0.7rem;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.popup {
+    position: relative;
+    background-color: #fff;
+    padding: 0 2rem;
+    /* overflow: auto; */
+    border-radius: 5px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.popup h1 {
+    text-align: center;
+}
+
+.popup .close-popup {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+}
+
+.popup-img {
+    max-height: 40vh;
+    float: left;
+    margin-right: 1rem;
+}
+
+.meal-info {
+    min-height: 400px;
+}
